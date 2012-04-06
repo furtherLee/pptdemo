@@ -1,0 +1,15 @@
+<?php
+
+date_default_timezone_set('Asia/Shanghai');
+
+define("DB_NAME", "ppt");
+define("DB_USER", "paike_dev");
+define("DB_PASS", "paike_dev");
+define("DB_HOST", "localhost");
+
+define("HOST_URL", "http://localhost");
+define("SITE_TITLE", "每日笑话");
+
+define("SESSION_PATH", "/tmp/sessions/");
+define("JS_HOME", "http://localhost/ppt/static/scripts/");
+define("POPULAR_LIMIT", 10);

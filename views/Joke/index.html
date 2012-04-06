@@ -1,0 +1,44 @@
+{% extends "/layout/normal-page.html" %}
+
+{% block css %}
+   <link href="/ppt/static/style/jokes.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div class="hero-unit">
+  <h1> 老招笑了 <img src="/ppt/static/img/hero.png"/></h1>
+    <section id="jokes">
+      {% for joke in jokes %}
+      <article class="well">
+	<a href="/ppt/joke/{{joke.getId()}}">
+	  <header class="label label-important">{{ joke.getTitle() }}</header>
+	</a>
+	
+	<div class="joke-content">{{ joke.getContent() | nl2br }}</div>
+	<hr/>
+	<footer class="row-fluid">
+	  <div class="pull-left up" data={{joke.getId()}}>
+	    <button class="btn btn-success">
+	      <i class="icon-white icon-plus"></i>
+	      顶一下
+	      <a>{{joke.getUp()}}</a>
+	    </button>
+	  </div>
+	  <div class="pull-left down" data={{joke.getId()}}>
+	    <button class="btn btn-warning">
+	      <i class="icon-white icon-minus"></i>
+	      踩一下
+	      <a>{{joke.getDown()}}</a>
+	    </button>
+	  </div>
+	  <label class="label label-info pull-right"> 搞笑日期: {{ joke.getUpdate_time()}} </label>
+	</footer>
+      </article>
+      {% endfor %}
+    </section>
+</div>
+{% endblock %}
+
+{% block js %}
+   <script src="/ppt/static/scripts/jokes.js" type="text/javascript"></script>
+{% endblock %}

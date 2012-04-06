@@ -1,0 +1,41 @@
+body{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#page-footer{
+    text-align: center;
+}
+
+.navbar-inner, .navbar{
+    background-color: #00FF7F;
+}
+
+
+.nav li a{
+    cursor: pointer;
+}
+
+.sidebar-nav{
+    padding: 9px 0;
+}
+
+.hero-unit{
+    background-color: #40E0D0;
+}
+
+article.well{
+    background-color: #FFFFFF;
+}
+
+article header.label{
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
